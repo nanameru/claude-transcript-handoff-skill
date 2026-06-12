@@ -1,9 +1,9 @@
 ---
-name: claude-transcript-handoff
+name: cc-handoff
 description: Extract and summarize Claude Code conversation history from local transcript JSONL files, including chat-visible assistant/user messages, tool uses, tool results, session metadata, cwd, and git branch. Use when the user asks to recover, hand off, audit, or inspect what Claude Code did in a branch, worktree, repo, or previous session.
 ---
 
-# Claude Transcript Handoff
+# CC Handoff
 
 ## Overview
 
@@ -16,7 +16,7 @@ The bundled script extracts chat-visible assistant/user text, tool calls, tool r
 Run from the repo or worktree you want to investigate:
 
 ```bash
-node /path/to/claude-transcript-handoff/scripts/extract-claude-transcript.mjs
+node /path/to/cc-handoff/scripts/extract-claude-transcript.mjs
 ```
 
 Useful options:

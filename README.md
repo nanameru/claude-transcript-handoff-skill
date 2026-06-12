@@ -1,4 +1,4 @@
-# Claude Transcript Handoff Skill
+# CC Handoff Skill
 
 Extract Claude Code conversation history from local transcript files and turn it into handoff artifacts for another agent or human.
 
@@ -30,7 +30,7 @@ Common bearer tokens, JWTs, API keys, and secret-like assignments are redacted b
 Install with the Vercel Labs Skills CLI:
 
 ```bash
-npx skills add nanameru/claude-transcript-handoff-skill --skill claude-transcript-handoff -g -a codex -a claude-code -y
+npx skills add nanameru/claude-transcript-handoff-skill --skill cc-handoff -g -a codex -a claude-code -y
 ```
 
 List the skill without installing:
@@ -41,25 +41,25 @@ npx skills add nanameru/claude-transcript-handoff-skill --list
 
 ## Use
 
-After installing, ask your agent to use `$claude-transcript-handoff`.
+After installing, ask your agent to use `$cc-handoff`.
 
 You can also run the script directly:
 
 ```bash
-node skills/claude-transcript-handoff/scripts/extract-claude-transcript.mjs
+node skills/cc-handoff/scripts/extract-claude-transcript.mjs
 ```
 
 Run against a specific worktree:
 
 ```bash
-node skills/claude-transcript-handoff/scripts/extract-claude-transcript.mjs \
+node skills/cc-handoff/scripts/extract-claude-transcript.mjs \
   --cwd /path/to/worktree
 ```
 
 Choose an output directory:
 
 ```bash
-node skills/claude-transcript-handoff/scripts/extract-claude-transcript.mjs \
+node skills/cc-handoff/scripts/extract-claude-transcript.mjs \
   --cwd /path/to/worktree \
   --out-dir ./handoff
 ```
@@ -67,7 +67,7 @@ node skills/claude-transcript-handoff/scripts/extract-claude-transcript.mjs \
 List candidate Claude project directories:
 
 ```bash
-node skills/claude-transcript-handoff/scripts/extract-claude-transcript.mjs \
+node skills/cc-handoff/scripts/extract-claude-transcript.mjs \
   --cwd /path/to/worktree \
   --list-candidates
 ```
@@ -90,7 +90,7 @@ This extracts persisted transcript fields and chat-visible text. It does not rec
 
 ```text
 skills/
-  claude-transcript-handoff/
+  cc-handoff/
     SKILL.md
     agents/openai.yaml
     scripts/extract-claude-transcript.mjs
