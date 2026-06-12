@@ -1,0 +1,4 @@
+interface:
+  display_name: "Claude Transcript Handoff"
+  short_description: "Extract Claude Code chat and tool history"
+  default_prompt: "Use $claude-transcript-handoff to extract and summarize Claude Code conversation history for this project."
